@@ -4,10 +4,7 @@ read container
 for i in `seq $container`
 do
   echo "Creating container $i ..."
-   docker run -it -d --name test-container$i ubuntu /bin/bash
+   docker run -it -d --name test-container$i manumanohar/ssh-img /bin/bash
   echo "The test-container$i is created."
-  sudo apt-get update
-  sudo apt-get install ssh -y
-
 done
 
